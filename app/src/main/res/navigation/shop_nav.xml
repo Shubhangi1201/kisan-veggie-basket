@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/shop_nav"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/cartFragment"
+        tools:layout="@layout/fragment_cart"
+        android:name="com.example.veggiebasket.user.shopping.presentation.fragment.cartscreen.CartFragment"
+        android:label="CartFragment" >
+        <action
+            android:id="@+id/action_cartFragment_to_singleProductInfoFragment"
+            app:destination="@id/singleProductInfoFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        tools:layout="@layout/fragment_home"
+        android:name="com.example.veggiebasket.user.shopping.presentation.fragment.homescreen.presentation.HomeFragment"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_homeFragment_to_singleCategoryFragment"
+            app:destination="@id/singleCategoryFragment" >
+            <argument
+                android:name="Categoryname"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_homeFragment_to_singleProductInfoFragment"
+            app:destination="@id/singleProductInfoFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        tools:layout="@layout/fragment_profile"
+        android:name="com.example.veggiebasket.user.shopping.presentation.fragment.profilescreen.ProfileFragment"
+        android:label="ProfileFragment" >
+        <action
+            android:id="@+id/action_profileFragment_to_termsFragment"
+            app:destination="@id/termsFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_myOrderFragment"
+            app:destination="@id/myOrderFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_myAddressFragment"
+            app:destination="@id/myAddressFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_privacyPolicyFragment"
+            app:destination="@id/privacyPolicyFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_personalDetailsFragment"
+            app:destination="@id/personalDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/singleCategoryFragment"
+        android:name="com.example.veggiebasket.user.shopping.presentation.fragment.homescreen.presentation.product_details.SingleCategoryFragment"
+        android:label="fragment_single_category"
+        tools:layout="@layout/fragment_single_category" >
+        <action
+            android:id="@+id/action_singleCategoryFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_singleCategoryFragment_to_singleProductInfoFragment"
+            app:destination="@id/singleProductInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/singleProductInfoFragment"
+        android:name="com.example.veggiebasket.user.shopping.presentation.fragment.homescreen.presentation.product_details.SingleProductInfoFragment"
+        android:label="fragment_single_product_info"
+        tools:layout="@layout/fragment_single_product_info" >
+        <action
+            android:id="@+id/action_singleProductInfoFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/myOrderFragment"
+        android:name="com.example.veggiebasket.user.shopping.presentation.fragment.profilescreen.fragments.MyOrderFragment"
+        android:label="fragment_my_order"
+        tools:layout="@layout/fragment_my_order" />
+    <fragment
+        android:id="@+id/myAddressFragment"
+        android:name="com.example.veggiebasket.user.shopping.presentation.fragment.profilescreen.fragments.MyAddressFragment"
+        android:label="fragment_my_address"
+        tools:layout="@layout/fragment_my_address" >
+        <action
+            android:id="@+id/action_myAddressFragment_to_editAddressFragment"
+            app:destination="@id/editAddressFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/termsFragment"
+        android:name="com.example.veggiebasket.user.shopping.presentation.fragment.profilescreen.fragments.TermsFragment"
+        android:label="fragment_terms"
+        tools:layout="@layout/fragment_terms" />
+    <fragment
+        android:id="@+id/privacyPolicyFragment"
+        android:name="com.example.veggiebasket.user.shopping.presentation.fragment.profilescreen.fragments.PrivacyPolicyFragment"
+        android:label="fragment_privacy_policy"
+        tools:layout="@layout/fragment_privacy_policy" />
+    <fragment
+        android:id="@+id/editAddressFragment"
+        tools:layout="@layout/fragment_edit_address"
+        android:name="com.example.veggiebasket.user.shopping.presentation.fragment.profilescreen.fragments.EditAddressFragment"
+        android:label="EditAddressFragment" />
+    <fragment
+        android:id="@+id/adminMyproductsFragment"
+        android:name="com.example.veggiebasket.admin.fragments.admin_myproduct_screen.AdminMyproductsFragment"
+        android:label="fragment_admin_myproducts"
+        tools:layout="@layout/fragment_admin_myproducts" >
+        <action
+            android:id="@+id/action_adminMyproductsFragment_to_singleProductInfoFragment"
+            app:destination="@id/singleProductInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/personalDetailsFragment"
+        android:name="com.example.veggiebasket.user.shopping.presentation.fragment.profilescreen.fragments.PersonalDetailsFragment"
+        android:label="fragment_personal_details"
+        tools:layout="@layout/fragment_personal_details" >
+        <action
+            android:id="@+id/action_personalDetailsFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        tools:layout="@layout/fragment_search"
+        android:name="com.example.veggiebasket.user.shopping.presentation.fragment.SearchFragment"
+        android:label="SearchFragment" />
+
+    <fragment
+        android:id="@+id/myorderMain2fragment"
+        android:name="com.example.veggiebasket.user.shopping.presentation.fragment.orderscreen.MyOrderMainFragment"
+        tools:layout="@layout/fragment_my_order_main"
+        android:label="MyOrder">
+        <action
+            android:id="@+id/action_myorderMain2fragment_to_product_infor_fragmnet"
+            app:destination="@id/singleProductInfoFragment"/>
+    </fragment>
+</navigation>

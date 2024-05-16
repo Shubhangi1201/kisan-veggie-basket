@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/admin_nav"
+    app:startDestination="@id/adminHomeFragment2">
+
+    <fragment
+        android:id="@+id/adminHomeFragment2"
+        android:name="com.example.veggiebasket.admin.fragments.admin_home_screen.AdminHomeFragment"
+        android:label="fragment_admin_home"
+        tools:layout="@layout/fragment_admin_home" />
+    <fragment
+        android:id="@+id/adminMyproductsFragment2"
+        android:name="com.example.veggiebasket.admin.fragments.admin_myproduct_screen.AdminMyproductsFragment"
+        android:label="fragment_admin_myproducts"
+        tools:layout="@layout/fragment_admin_myproducts" >
+        <action
+            android:id="@+id/action_adminMyproductsFragment2_to_adminEditProductFragment"
+            app:destination="@id/adminEditProductFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/adminnPersonalDetailsFragment"
+        android:name="com.example.veggiebasket.admin.fragments.admin_myaccount_screen.AdminnPersonalDetailsFragment"
+        android:label="fragment_adminn_personal_details"
+        tools:layout="@layout/fragment_adminn_personal_details" >
+
+        <action
+            android:id="@+id/action_adminnPersonalDetailsFragment_to_adminProfileFragment2"
+            app:destination="@id/adminProfileFragment2" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/adminProfileFragment2"
+        android:name="com.example.veggiebasket.admin.fragments.admin_myaccount_screen.AdminProfileFragment"
+        android:label="fragment_admin_profile"
+        tools:layout="@layout/fragment_admin_profile" >
+        <action
+            android:id="@+id/action_adminProfileFragment2_to_adminnPersonalDetailsFragment"
+            app:destination="@id/adminnPersonalDetailsFragment" />
+        <action
+            android:id="@+id/action_adminProfileFragment2_to_privacyPolicyFragment2"
+            app:destination="@id/privacyPolicyFragment2" />
+        <action
+            android:id="@+id/action_adminProfileFragment2_to_termsFragment2"
+            app:destination="@id/termsFragment2" />
+
+        <action
+            android:id="@+id/action_adminProfileFragment2_to_adminMyAddressFragment"
+            app:destination="@id/adminMyAddressFragment" />
+        <action
+            android:id="@+id/action_adminProfileFragment2_to_hilt_MyOrderMainFragment"
+            app:destination="@id/hilt_MyOrderMainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/privacyPolicyFragment2"
+        android:name="com.example.veggiebasket.user.shopping.presentation.fragment.profilescreen.fragments.PrivacyPolicyFragment"
+        android:label="fragment_privacy_policy"
+        tools:layout="@layout/fragment_privacy_policy" />
+    <fragment
+        android:id="@+id/termsFragment2"
+        android:name="com.example.veggiebasket.user.shopping.presentation.fragment.profilescreen.fragments.TermsFragment"
+        android:label="fragment_terms"
+        tools:layout="@layout/fragment_terms" />
+
+    <fragment
+        android:id="@+id/adminMyAddressFragment"
+        android:name="com.example.veggiebasket.admin.fragments.admin_myaccount_screen.AdminMyAddressFragment"
+        android:label="fragment_admin_my_address"
+        tools:layout="@layout/fragment_admin_my_address" >
+        <action
+            android:id="@+id/action_adminMyAddressFragment_to_adminProfileFragment2"
+            app:destination="@id/adminProfileFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/hilt_MyOrderMainFragment"
+        tools:layout="@layout/fragment_my_order_main"
+        android:name="com.example.veggiebasket.user.shopping.presentation.fragment.orderscreen.Hilt_MyOrderMainFragment"
+        android:label="Hilt_MyOrderMainFragment" >
+        <action
+            android:id="@+id/action_hilt_MyOrderMainFragment_to_adminProfileFragment2"
+            app:destination="@id/adminProfileFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminEditProductFragment"
+        android:name="com.example.veggiebasket.admin.fragments.admin_myproduct_screen.domain.edit_product.AdminEditProductFragment"
+        android:label="fragment_admin_edit_product"
+        tools:layout="@layout/fragment_admin_edit_product" />
+</navigation>

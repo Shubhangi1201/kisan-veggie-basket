@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "41658157608",
+    "firebase_url": "https://veggie-basket-91c9a-default-rtdb.firebaseio.com",
+    "project_id": "veggie-basket-91c9a",
+    "storage_bucket": "veggie-basket-91c9a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:41658157608:android:d4e1a6877e4a875e2b831d",
+        "android_client_info": {
+          "package_name": "com.example.veggiebasket"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCKW-n5vl10IQu2cGCIbnExlLObz7qplgE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
